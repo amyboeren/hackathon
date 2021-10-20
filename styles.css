@@ -1,0 +1,360 @@
+body {
+    background-color: white;
+    font-family: 'Poppins', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 {
+    color: black;
+    font-family: 'Caveat', 'Tahoma';
+    font-style: none;
+    text-align: center;
+}
+h1.center {
+    color: black;
+    font-family: 'Poppins', 'Tahoma';
+    text-align: center;
+    margin: 0 auto;
+    width: auto; 
+    font-size: 25px;
+}
+h2 {
+    font-size: 17px;
+}
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding:10px;
+    margin: 0px 2em 0px 2em;
+}
+p.blok {
+    background-color: lightgrey;
+    border-style: ridge;
+    margin-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+a {
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    color: black;
+    font-size: 18px;
+}
+/*Om de afbeelding te centreren: display = block en margin right en left = auto*/
+.responsive {
+    width: 70%;
+    min-width: 200px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+    padding-top:0%;
+    padding-bottom: 2em;
+    display: block;
+}
+.responsive-artikel {
+    width: 50%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 2em;
+    display: block;
+    float: center;
+}
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: white;
+}  
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 8%
+} 
+
+/*Als je je button gecentreerd wilt hebben, voeg dat "margin: 0 auto" en "display: block" toe aan je button element*/
+button {
+    margin: 0 auto;
+    text-align: center;
+    background-color: purple;
+    border: none;
+    padding: 10px 10px;
+    display: block;
+    font-size: 10px;
+    border-radius: 8px;
+    font-family: poppins;   
+}
+.home a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+button:hover {
+    background-color: pink;
+    color: white;
+}
+.bedankt {
+    background-color: purple;
+    border: none;
+    padding: 10px 10px;
+    display: block;
+    font-size: 10px;
+    border-radius: 8px;
+    font-family: poppins; 
+    margin: 0 auto;  
+}
+.bedankt a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.container-twee{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 25%;
+}
+
+/* z-index betekent dat als het element -1 is, deze achter het andere element komt te staan.*/
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+/* Het overflow element vertelt wat er moet gebeuren met het element als deze te groot is om in een specific area te passen. Hidden betekent dat de content wordt afgeknipt. Je kunt ook kiezen voor scroll, auto of visible(default)*/  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+.header li a {
+    display: block;
+    padding: 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    font-family: poppins;
+}
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: pacifico;
+}
+.tips ol{
+    padding: 100px;
+}
+.tips li{
+    font-family: poppins;
+    padding:0%;
+}
+
+/* menu */
+/*Het clear element geeft aan wat er moet gebeuren met het element ernaast. Zowel links als rechts. p.clear: left betekent dat er links geen andere elementen mogen staan. */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    padding: 15px;
+    transition: max-height .2s ease-out;;
+}
+/* user-select: none betekent dat je de tekst niet met dubbelklik kunt selecteren.*/
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+/*hamburgermenu*/  
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+  
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+.header .menu-btn {
+    display: none;
+}
+  
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+.center {
+    text-align: center;
+    list-style-position: inside;
+    font-family: poppins;
+}
+/*FORM*/
+/*Met box-sizing: border-box zorg je ervoor dat de pading en border in het element zijn inbegrepen in de width en height. Beide div's blijven even groot, ondanks eeen afwijkende padding.*/
+* {
+    box-sizing: border-box;
+}
+  
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: poppins;
+}
+  
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: poppins;
+}
+  
+input[type=submit] {
+    background-color: purple;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-family: poppins;
+}
+  
+input[type=submit]:hover {
+    background-color: rgb(231, 81, 231);
+}
+  
+.container-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 25px;
+}
+  
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+/* 48em = 768px */
+  
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
+@media (min-width: 1024px) {
+    p {
+        font-size: 16px;
+        line-height: 200%;
+    }
+}
+@media (min-width: 768px) {                                                          
+    h1 {                                                                             
+        font-size: 100px;                                                             
+    } 
+    img {
+        max-width: 700px;
+    }  
+    .responsive-artikel {
+        width: 50%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        padding-bottom: 2em;
+        display: block;
+        float: center;
+    }    
+    .container-twee{
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 125px;
+    }                                                        
+}   
+@media (max-width: 768px) {
+    .responsive {
+        margin-top: 100px;
+    }
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
